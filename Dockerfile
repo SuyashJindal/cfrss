@@ -16,6 +16,8 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -o app cmd/web/main.go
 FROM alpine:3.16
 
 WORKDIR /cfrss
+
 COPY --from=builder /build/app bin/app
+COPY frontend/build/ frontend/build/
 
 ENTRYPOINT [ "bin/app" ]
