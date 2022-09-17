@@ -1,0 +1,19 @@
+.cf-table-wrapper {
+    margin: 3em 1em;
+}
+
+.cf-td {
+    vertical-align:top;
+    padding-left:1em;
+}
+
+.comment-table {
+    border: 1px dashed white;
+}
+
+comment-table .info {
+    font-size: 0.8em;
+    color: #B9B9B9;
+    margin-bottom: 0.5em;
+    position: relative;
+}
