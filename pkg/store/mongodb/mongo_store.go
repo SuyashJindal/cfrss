@@ -353,8 +353,9 @@ func (store *mongoStore) updateSingleUser(findFilter, updateFilter interface{}) 
 
 // NewMongoStore creates a new instance of the mongo store.
 func NewMongoStore(mongoURI, databaseName string) (store.CodeforcesStore, error) {
-	zap.S().Infof("Attempting to create a new mongo store. mongoURI: %s, "+
-		"databaseName = %s", mongoURI, databaseName)
+	// For security reasons, don't log the mongoURI.
+	zap.S().Infof("Attempting to create a new mongo store. "+
+		"DatabaseName = %s", databaseName)
 
 	// Create a new client and connect to the server
 	client, err := mongo.Connect(

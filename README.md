@@ -50,8 +50,14 @@ docker run --network=host cfrss:latest
 If you want to use the cloud version, pass the flags like so
 
 ```shell
-docker run -d --restart=always --name cfrss cfrss:latest --mongo-addr=mongodb+srv://admin:password@cluster0.s0g4l.mongodb.net/test --database-name=cfrss
+docker run -d --restart always -p 5000:5000 --name cfrss cfrss:latest --mongo-addr=mongodb+srv://admin:enterCorrectValue@cluster0.s0g4l.mongodb.net/test --database-name=cfrss-local --enable-cf-scheduler=false --environment=dev
 ```
+
+In production, you need to change 3 things:
+1. Enter the correct MongoDB credentials.
+2. Enter the correct DB name: `cfrss`.
+3. Set `enable-cf-scheduler` to `true`.
+4. Set `environment` to `prod`.
 
 To view the logs, 
 
