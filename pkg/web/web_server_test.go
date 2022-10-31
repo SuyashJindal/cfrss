@@ -45,6 +45,4 @@ var _ = Describe("WebServer", func() {
 		Expect(rec.Code).Should(Equal(http.StatusOK))
 	})
 
-	It("should return ")
-
 })
