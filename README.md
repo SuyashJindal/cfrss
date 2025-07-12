@@ -1,4 +1,6 @@
+![Short description of diagram](cfrss-poster.png)
 # CF RSS
+
 
 This version has a scheduler that makes an API request to Codeforces at fixed interval, retrieves the batch result, and stores it in MongoDB. This can retain the recent action history forever.
 
