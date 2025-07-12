@@ -1,4 +1,4 @@
-![Short description of diagram](cfrss-poster.png)
+![Short description of diagram](cf-rss-poster.png) 
 # CF RSS
 
 
